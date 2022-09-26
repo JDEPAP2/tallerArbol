@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<<<<<<< HEAD
-=======
 <?import javafx.scene.text.*?>
 <?import javafx.scene.canvas.*?>
->>>>>>> 8ff45af7cae9404c2b460b75effba8ed96352c6b
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<<<<<<< HEAD
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLDocumentController">
-    <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
-    </children>
-=======
 <AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLDocumentController">
    <children>
       <Canvas fx:id="lienzo" height="342.0" layoutX="28.0" layoutY="33.0" width="711.0" />
@@ -50,5 +40,4 @@
       </Label>
       <Button fx:id="buscarNodo" layoutX="375.0" layoutY="444.0" mnemonicParsing="false" onAction="#buscarNodo" prefHeight="25.0" prefWidth="97.0" text="Buscar Nodo" />
    </children>
->>>>>>> 8ff45af7cae9404c2b460b75effba8ed96352c6b
 </AnchorPane>
