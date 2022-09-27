@@ -17,11 +17,11 @@ public class Arbol {
 
     }
 
-    public boolean existe(int busqueda) {
+    public boolean existe(double busqueda) {
         return existe(this.raiz, busqueda);
     }
 
-    private boolean existe(Nodo n, int busqueda) {
+    private boolean existe(Nodo n, double busqueda) {
         if (n == null) {
             return false;
         }

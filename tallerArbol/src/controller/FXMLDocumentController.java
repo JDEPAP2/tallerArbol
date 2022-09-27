@@ -15,6 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
+import modelo.Arbol;
 
 /**
  *
@@ -36,10 +37,13 @@ public class FXMLDocumentController implements Initializable {
     
     GraphicsContext g;
     
+    private Arbol arbol;
+    
     
     @FXML
     private void addNodo(ActionEvent event) {
-        
+        double x = Double.parseDouble(labelX.getText());
+        arbol.insertar(0.5);
     }
     
     @FXML
@@ -49,17 +53,17 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void recorrerIn(ActionEvent event) {
-        
+        arbol.inorden();
     }
  
     @FXML
     private void recorrerPre(ActionEvent event) {
-        
+        arbol.preorden();
     }    
 
     @FXML
     private void recorrerPost(ActionEvent event) {
-        
+        arbol.postorden();
     }    
     
     @Override
@@ -71,6 +75,7 @@ public class FXMLDocumentController implements Initializable {
         g.setStroke(Color.BLACK);
         g.setLineWidth(7);
         g.strokeRect(0, 0, w, h);
+        arbol = new Arbol();
         // TODO
     }    
     
