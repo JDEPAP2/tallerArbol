@@ -5,6 +5,7 @@
  */
 package vista;
 
+import datos.Punto3D;
 import modelo.Arbol;
 
 /**
@@ -18,12 +19,12 @@ public class mainNodo {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Arbol arbol = new Arbol();
-        arbol.insertar(3);
-        arbol.insertar(2);
-        arbol.insertar(1);
-        arbol.insertar(4);
-        arbol.insertar(0);
+        Arbol<Punto3D> arbol = new Arbol<>();
+        arbol.insertar(new Punto3D(1,1,1));
+        arbol.insertar(new Punto3D(2,1,1));
+        arbol.insertar(new Punto3D(3,1,1));
+        arbol.insertar(new Punto3D(4,1,1));
+        arbol.insertar(new Punto3D(5,1,1));
         System.out.println("preorden");
         arbol.preorden();
     }

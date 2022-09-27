@@ -4,30 +4,27 @@
  */
 package modelo;
 
+import datos.Punto3D;
 import modelo.Nodo;
 
 /**
  *
  * @author Juan
  */
-public class Arbol {
+public class Arbol <T extends Base>{
     private Nodo raiz;
-
-    public Arbol() {
-
-    }
-
-    public boolean existe(double busqueda) {
+    public Arbol() {}
+    public boolean existe(T busqueda) {
         return existe(this.raiz, busqueda);
     }
 
-    private boolean existe(Nodo n, double busqueda) {
+    private boolean existe(Nodo n, T busqueda) {
         if (n == null) {
             return false;
         }
         if (n.getDato() == busqueda) {
             return true;
-        } else if (busqueda < n.getDato()) {
+        } else if (((Punto3D) busqueda).getX() < ((Punto3D) n.getDato()).getX()) {
             return existe(n.getIzquierda(), busqueda);
         } else {
             return existe(n.getDerecha(), busqueda);
@@ -35,26 +32,28 @@ public class Arbol {
 
     }
 
-    public void insertar(double dato) {
+    public void insertar(T elemento) {
         if (this.raiz == null) {
-            this.raiz = new Nodo(dato);
+            this.raiz = new Nodo(elemento);
         } else {
-            this.insertar(this.raiz, dato);
+            this.insertar(this.raiz, elemento);
         }
     }
 
-    private void insertar(Nodo padre, double dato) {
-        if (dato > padre.getDato()) {
+    private void insertar(Nodo padre, T elemento) {
+        Punto3D datoHijo = (Punto3D) elemento;
+        Punto3D datoPadre = (Punto3D) padre.getDato();
+        if (datoHijo.getX() > datoPadre.getY()) {
             if (padre.getDerecha() == null) {
-                padre.setDerecha(new Nodo(dato));
+                padre.setDerecha(new Nodo(elemento));
             } else {
-                this.insertar(padre.getDerecha(), dato);
+                this.insertar(padre.getDerecha(), elemento);
             }
         } else {
             if (padre.getIzquierda() == null) {
-                padre.setIzquierda(new Nodo(dato));
+                padre.setIzquierda(new Nodo(elemento));
             } else {
-                this.insertar(padre.getIzquierda(), dato);
+                this.insertar(padre.getIzquierda(), elemento);
             }
         }
     }

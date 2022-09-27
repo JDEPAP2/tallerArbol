@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.canvas.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLDocumentController">
    <children>
-      <Canvas fx:id="lienzo" height="342.0" layoutX="28.0" layoutY="33.0" width="711.0" />
-      <TextField fx:id="addX" layoutX="179.0" layoutY="412.0" prefHeight="25.0" prefWidth="73.0" />
-      <TextField fx:id="addY" layoutX="179.0" layoutY="444.0" prefHeight="25.0" prefWidth="73.0" />
-      <TextField fx:id="addZ" layoutX="179.0" layoutY="477.0" prefHeight="25.0" prefWidth="73.0" />
-      <Button fx:id="añadirNodo" layoutX="268.0" layoutY="444.0" mnemonicParsing="false" onAction="#addNodo" prefHeight="25.0" prefWidth="97.0" text="Añadir Nodo" />
-      <Label fx:id="labelX" layoutX="92.0" layoutY="416.0" text="Punto en X:">
+      <Canvas fx:id="lienzo" height="342.0" layoutX="28.0" layoutY="33.0" width="680.0" />
+      <TextField fx:id="addX" layoutX="135.0" layoutY="401.0" prefHeight="25.0" prefWidth="73.0" />
+      <TextField fx:id="addY" layoutX="135.0" layoutY="433.0" prefHeight="25.0" prefWidth="73.0" />
+      <TextField fx:id="addZ" layoutX="135.0" layoutY="466.0" prefHeight="25.0" prefWidth="73.0" />
+      <Button fx:id="añadirNodo" layoutX="222.0" layoutY="419.0" mnemonicParsing="false" onAction="#addNodo" prefHeight="25.0" prefWidth="97.0" text="Añadir Nodo" />
+      <Label fx:id="labelX" layoutX="48.0" layoutY="405.0" text="Punto en X:">
          <font>
             <Font name="Bodoni MT" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="labelY" layoutX="92.0" layoutY="448.0" text="Punto en Y:">
+      <Label fx:id="labelY" layoutX="48.0" layoutY="437.0" text="Punto en Y:">
          <font>
             <Font name="Bodoni MT" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="labelZ" layoutX="92.0" layoutY="481.0" text="Punto en Z:">
+      <Label fx:id="labelZ" layoutX="48.0" layoutY="470.0" text="Punto en Z:">
          <font>
             <Font name="Bodoni MT" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="recInorder" layoutX="495.0" layoutY="418.0" mnemonicParsing="false" onAction="#recorrerIn" prefHeight="25.0" prefWidth="177.0" text="Inorder" />
+      <Button fx:id="recInorder" layoutX="495.0" layoutY="419.0" mnemonicParsing="false" onAction="#recorrerIn" prefHeight="25.0" prefWidth="177.0" text="Inorder" />
       <Button fx:id="recPreorder" layoutX="495.0" layoutY="446.0" mnemonicParsing="false" onAction="#recorrerPre" prefHeight="25.0" prefWidth="177.0" text="Preorder" />
       <Button fx:id="recPostorden" layoutX="495.0" layoutY="474.0" mnemonicParsing="false" onAction="#recorrerPost" prefHeight="25.0" prefWidth="177.0" text="Postorder" />
       <Label layoutX="531.0" layoutY="397.0" text="Tipo de Recorrido">
@@ -38,6 +37,6 @@
             <Font name="Bodoni MT" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="buscarNodo" layoutX="375.0" layoutY="444.0" mnemonicParsing="false" onAction="#buscarNodo" prefHeight="25.0" prefWidth="97.0" text="Buscar Nodo" />
+      <Button fx:id="buscarNodo" layoutX="222.0" layoutY="454.0" mnemonicParsing="false" onAction="#buscarNodo" prefHeight="25.0" prefWidth="97.0" text="Buscar Nodo" />
    </children>
 </AnchorPane>

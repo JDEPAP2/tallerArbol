@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import datos.Punto3D;
 import modelo.Base;
 
 /**
@@ -15,26 +16,19 @@ class Nodo <T extends Base> {
     private Nodo izquierda;
     private Nodo derecha;
 
-    private double dato;
+    private T dato;
 
-    /**
-     * Get the value of dato
-     *
-     * @return the value of dato
-     */
-    public double getDato() {
+    public Nodo(T dato) {
+        this.dato = dato;
+    }
+    
+    public T getDato() {
         return dato;
     }
 
-    /**
-     * Set the value of dato
-     *
-     * @param dato new value of dato
-     */
-    public void setDato(double dato) {
+    public void setDato(T dato) {
         this.dato = dato;
     }
-
 
     public Nodo getIzquierda() {
         return izquierda;
@@ -56,9 +50,6 @@ class Nodo <T extends Base> {
         System.out.println(this.getDato());
     }
 
-    public Nodo(double dato) {
-        this.dato = dato;
-    }
-    
+
     
 }

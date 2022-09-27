@@ -4,6 +4,7 @@
  */
 package controller;
 
+import datos.Punto3D;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -37,18 +38,23 @@ public class FXMLDocumentController implements Initializable {
     
     GraphicsContext g;
     
-    private Arbol arbol;
+    private Arbol<Punto3D> arbol;
     
     
     @FXML
     private void addNodo(ActionEvent event) {
-        double x = Double.parseDouble(labelX.getText());
-        arbol.insertar(0.5);
+        double x = Double.parseDouble(addX.getText());
+        double y = Double.parseDouble(addY.getText());
+        double z = Double.parseDouble(addZ.getText());
+        arbol.insertar(new Punto3D(x,y,z));
     }
     
     @FXML
     private void buscarNodo(ActionEvent event) {
-        
+        double x = Double.parseDouble(addX.getText());
+        double y = Double.parseDouble(addY.getText());
+        double z = Double.parseDouble(addZ.getText());
+        arbol.insertar(new Punto3D(x,y,z));
     }
     
     @FXML
