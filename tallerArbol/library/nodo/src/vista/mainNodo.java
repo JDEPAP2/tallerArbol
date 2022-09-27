@@ -27,6 +27,9 @@ public class mainNodo {
         arbol.insertar(new Punto3D(5,1,1));
         System.out.println("preorden");
         arbol.preorden();
+        Punto3D p1 = new Punto3D(1,1,1);
+        Punto3D p2 = new Punto3D(1,1,1);
+        
     }
     
 }

@@ -51,7 +51,7 @@ public class Punto3D extends Base {
 
     @Override
     public String toString() {
-        return x + ", " + y + ", " + z ;
+        return "Punto3D( X= " + x + ", Y=" + y + ", Z=" + z + ")";
     }
 
     @Override

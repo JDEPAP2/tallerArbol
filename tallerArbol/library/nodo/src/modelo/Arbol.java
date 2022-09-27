@@ -22,9 +22,11 @@ public class Arbol <T extends Base>{
         if (n == null) {
             return false;
         }
-        if (n.getDato() == busqueda) {
+        Punto3D datoNodo = (Punto3D) n.getDato();
+        Punto3D datoBus = (Punto3D) busqueda;
+        if (datoNodo.toString().equals(datoBus.toString())) {
             return true;
-        } else if (((Punto3D) busqueda).getX() < ((Punto3D) n.getDato()).getX()) {
+        } else if (datoBus.getX() < datoNodo.getX()) {
             return existe(n.getIzquierda(), busqueda);
         } else {
             return existe(n.getDerecha(), busqueda);

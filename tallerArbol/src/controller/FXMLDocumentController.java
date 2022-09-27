@@ -54,7 +54,11 @@ public class FXMLDocumentController implements Initializable {
         double x = Double.parseDouble(addX.getText());
         double y = Double.parseDouble(addY.getText());
         double z = Double.parseDouble(addZ.getText());
-        arbol.insertar(new Punto3D(x,y,z));
+        if(arbol.existe(new Punto3D(x,y,z))){
+            System.out.println("Existe");         
+        }else{
+            System.out.println("No Existe");
+        }
     }
     
     @FXML
