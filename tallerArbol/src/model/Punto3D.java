@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package nodo;
+package model;
+
+
 
 /**
  *
  * @author Juan Rodriguez
  */
-public class Punto3D extends Base {
+public class Punto3D {
     private double x;
     private double y;
     private double z;
@@ -50,10 +52,5 @@ public class Punto3D extends Base {
     @Override
     public String toString() {
         return x + ", " + y + ", " + z ;
-    }
-
-    @Override
-    public Base copy() {
-       return new Punto3D( x,y,z);
     }
 }
