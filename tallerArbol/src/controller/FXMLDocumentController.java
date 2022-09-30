@@ -17,7 +17,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import modelo.Arbol;
-
 /**
  *
  * @author Juan
@@ -87,6 +86,10 @@ public class FXMLDocumentController implements Initializable {
         g.strokeRect(0, 0, w, h);
         arbol = new Arbol();
         // TODO
-    }    
+    }
+
+    public void pintar(){
+        
+    }
     
 }

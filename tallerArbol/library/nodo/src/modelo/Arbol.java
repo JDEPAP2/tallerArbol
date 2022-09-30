@@ -5,7 +5,6 @@
 package modelo;
 
 import datos.Punto3D;
-import modelo.Nodo;
 
 /**
  *
@@ -38,27 +37,10 @@ public class Arbol <T extends Base>{
         if (this.raiz == null) {
             this.raiz = new Nodo(elemento);
         } else {
-            this.insertar(this.raiz, elemento);
+            raiz = raiz.insertar(raiz, elemento);
         }
     }
 
-    private void insertar(Nodo padre, T elemento) {
-        Punto3D datoHijo = (Punto3D) elemento;
-        Punto3D datoPadre = (Punto3D) padre.getDato();
-        if (datoHijo.getX() > datoPadre.getY()) {
-            if (padre.getDerecha() == null) {
-                padre.setDerecha(new Nodo(elemento));
-            } else {
-                this.insertar(padre.getDerecha(), elemento);
-            }
-        } else {
-            if (padre.getIzquierda() == null) {
-                padre.setIzquierda(new Nodo(elemento));
-            } else {
-                this.insertar(padre.getIzquierda(), elemento);
-            }
-        }
-    }
     
     private void preorden(Nodo n) {
         if (n != null) {
